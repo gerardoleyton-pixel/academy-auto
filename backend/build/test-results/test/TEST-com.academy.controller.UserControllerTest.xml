@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.academy.controller.UserControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-05T22:58:59" hostname="PSOFKA01247" time="0.029">
+  <properties/>
+  <testcase name="testCRUD()" classname="com.academy.controller.UserControllerTest" time="0.029"/>
+  <system-out><![CDATA[2025-11-05T17:58:59.883-05:00  INFO 24284 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.academy.controller.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-05T17:58:59.885-05:00  INFO 24284 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.academy.Application for test class com.academy.controller.UserControllerTest
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

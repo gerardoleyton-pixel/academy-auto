@@ -1,0 +1,27 @@
+:root{
+  --bg:#f5f6f7;
+  --muted:#6b7280;
+  --blue:#0b6ef6;
+  --green:#12b886;
+  --gray:#e6e9ec;
+  --btn-color:#fff;
+}
+
+*{box-sizing:border-box;font-family:Inter, Roboto, Arial, sans-serif}
+body{margin:0;background:var(--bg);color:#111}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:#fff;border-bottom:1px solid var(--gray)}
+.site-header .brand{font-weight:700;font-size:1.25rem;cursor:pointer}
+.site-header nav button{margin-left:0.5rem;padding:0.5rem 0.75rem;border-radius:6px;border:none;background:var(--blue);color:var(--btn-color);cursor:pointer}
+.site-footer{padding:1rem 2rem;text-align:center;background:#fff;border-top:1px solid var(--gray);margin-top:2rem}
+main{padding:2rem}
+.home .courses-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.course-card{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+.course-card h3{margin:0 0 0.5rem}
+.btn{background:var(--green);color:var(--btn-color);border:none;padding:0.5rem 0.75rem;border-radius:6px;cursor:pointer}
+.placeholder{padding:2rem;background:linear-gradient(90deg,#fff,#f8fafc);border-radius:8px;text-align:center;color:var(--muted)}
+.auth label{display:block;margin:0.5rem 0}
+.auth input{padding:0.5rem;width:100%;max-width:320px}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center}
+.modal{background:#fff;padding:1rem;border-radius:8px;min-width:320px}
+.modal .modal-footer{margin-top:1rem;text-align:right}
+@media (max-width:600px){.site-header{padding:1rem}.home .courses-grid{grid-template-columns:1fr}}
