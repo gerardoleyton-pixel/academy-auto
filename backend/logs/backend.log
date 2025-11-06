@@ -53,3 +53,12 @@ Hibernate: insert into course (category,level,title,id) values (?,?,?,default)
 Hibernate: select count(*) from users u1_0
 Hibernate: insert into users (password,role,username,id) values (?,?,?,default)
 Hibernate: insert into users (password,role,username,id) values (?,?,?,default)
+2025-11-06T12:26:48.545-05:00  INFO 22520 --- [nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1147 ms
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.id=?
+Hibernate: insert into users (password,role,username,id) values (?,?,?,default)
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.id=?
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.id=?
+Hibernate: update users set password=?,role=?,username=? where id=?
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.id=?
+Hibernate: update users set password=?,role=?,username=? where id=?

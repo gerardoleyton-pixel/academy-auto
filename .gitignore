@@ -1,0 +1,59 @@
+# Gradle
+.gradle/
+build/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven
+target/
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.settings/
+.project
+
+# VS Code
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Spring Boot
+spring-boot-app.jar
+
+# H2 database files
+*.db
+
+# Node / Frontend
+node_modules/
+.parcel-cache/
+dist/
+
+# dotenv
+.env
+
+# Serenity / reports
+target/
+serenity-report/
+
+# Others
+*.tmp
+*.swp
+
+# Keep build output for backend
+/backend/build/
+/frontend/dist/
