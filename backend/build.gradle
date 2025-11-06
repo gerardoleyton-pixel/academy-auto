@@ -4,10 +4,27 @@ plugins {
     id 'java'
 }
 
+springBoot {
+    mainClass = 'com.academy.Application'
+}
+
 group = 'com.academy'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '21'
-targetCompatibility = '21'
+
+// Forzar toolchain de Java para reproducibilidad (usar Java 17 por estabilidad con Spring Boot 3.2)
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+// Compatibilidad de compilación / release
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+tasks.withType(org.gradle.api.tasks.compile.JavaCompile).configureEach {
+    options.release = 17
+}
 
 repositories {
     mavenCentral()
@@ -19,9 +36,57 @@ dependencies {
     runtimeOnly 'com.h2database:h2'
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0'
 
+    // Security & JWT
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+    // Validation
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // BDD testing dependencies
+    testImplementation 'io.cucumber:cucumber-java:7.14.0'
+    testImplementation 'io.cucumber:cucumber-spring:7.14.0'
+    testImplementation 'io.cucumber:cucumber-junit-platform-engine:7.14.0'
+    testImplementation 'io.rest-assured:rest-assured:5.3.2'
+
+    // Additional Rest-Assured modules for JSON/XML path assertions
+    testImplementation 'io.rest-assured:json-path:5.3.2'
+    testImplementation 'io.rest-assured:xml-path:5.3.2'
+
+    // JUnit Platform Suite
+    testImplementation 'org.junit.platform:junit-platform-suite:1.10.1'
+    testImplementation 'org.junit.platform:junit-platform-suite-api:1.10.1'
+    testImplementation 'org.junit.platform:junit-platform-suite-engine:1.10.1'
+
+    // Serenity BDD (API reporting)
+    testImplementation 'net.serenity-bdd:serenity-core:3.9.8'
+    testImplementation 'net.serenity-bdd:serenity-junit5:3.9.8'
+    testImplementation 'net.serenity-bdd:serenity-rest-assured:3.9.8'
+    // Screenplay support for REST interactions
+    testImplementation 'net.serenity-bdd:serenity-screenplay:3.9.8'
+    testImplementation 'net.serenity-bdd:serenity-screenplay-rest:3.9.8'
+    testImplementation 'org.json:json:20231013'
+
+    // Matchers for assertions
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 test {
     useJUnitPlatform()
+    systemProperty "serenity.project.name", "Academy Backend BDD Tests"
+    systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags", "")
+    testLogging {
+        events "passed", "skipped", "failed"
+        exceptionFormat "full"
+    }
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
 }

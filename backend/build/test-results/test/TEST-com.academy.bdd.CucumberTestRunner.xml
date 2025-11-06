@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.academy.bdd.CucumberTestRunner" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-11-06T17:25:38" hostname="PARCEGER" time="31.648">
+  <properties/>
+  <testcase name="Crear un usuario" classname="com.academy.bdd.CucumberTestRunner" time="29.312"/>
+  <testcase name="Usuario inicia sesión correctamente" classname="com.academy.bdd.CucumberTestRunner" time="1.792"/>
+  <testcase name="Estudiante se matricula en un curso" classname="com.academy.bdd.CucumberTestRunner" time="0.289"/>
+  <testcase name="Successful user registration" classname="com.academy.bdd.CucumberTestRunner" time="0.162"/>
+  <testcase name="Usuario se registra exitosamente" classname="com.academy.bdd.CucumberTestRunner" time="0.077"/>
+  <system-out><![CDATA[12:25:39.163 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.academy.bdd.config.CucumberSpringConfiguration]: CucumberSpringConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:25:39.508 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.academy.Application for test class com.academy.bdd.config.CucumberSpringConfiguration
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2025-11-06T12:25:40.984-05:00  WARN 27452 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/user/.gradle/caches/modules-2/files-2.1/org.json/json/20231013/e22e0c040fe16f04ffdb85d851d77b07fc05ea52/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/user/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-11-06T12:25:41.036-05:00  INFO 27452 --- [    Test worker] c.a.b.c.CucumberSpringConfiguration      : Starting CucumberSpringConfiguration using Java 17.0.12 with PID 27452 (started by ParceGer in C:\Users\user\Documents\sofka\academy-auto\backend)
+2025-11-06T12:25:41.038-05:00  INFO 27452 --- [    Test worker] c.a.b.c.CucumberSpringConfiguration      : No active profile set, falling back to 1 default profile: "default"
+2025-11-06T12:25:45.149-05:00  INFO 27452 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-06T12:25:45.424-05:00  INFO 27452 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 201 ms. Found 3 JPA repository interfaces.
+2025-11-06T12:25:47.847-05:00  INFO 27452 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-11-06T12:25:47.887-05:00  INFO 27452 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-06T12:25:47.889-05:00  INFO 27452 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-11-06T12:25:48.290-05:00  INFO 27452 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-06T12:25:48.293-05:00  INFO 27452 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6480 ms
+2025-11-06T12:25:48.406-05:00  INFO 27452 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-06T12:25:49.079-05:00  INFO 27452 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:academydb user=SA
+2025-11-06T12:25:49.085-05:00  INFO 27452 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-06T12:25:49.115-05:00  INFO 27452 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:academydb'
+2025-11-06T12:25:49.646-05:00  INFO 27452 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-06T12:25:49.975-05:00  INFO 27452 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-11-06T12:25:50.142-05:00  INFO 27452 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-06T12:25:50.729-05:00  INFO 27452 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-06T12:25:50.896-05:00  WARN 27452 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-06T12:25:53.836-05:00  INFO 27452 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: create table course (id bigint generated by default as identity, category varchar(255), level varchar(255), title varchar(255), primary key (id))
+Hibernate: create table enrollment (id bigint generated by default as identity, course_id bigint not null, student_id bigint not null, primary key (id))
+Hibernate: create table users (id bigint generated by default as identity, password varchar(255) not null, role varchar(255) not null, username varchar(255) not null, primary key (id))
+Hibernate: alter table if exists users drop constraint if exists UK_r43af9ap4edm43mmtq01oddj6
+Hibernate: alter table if exists users add constraint UK_r43af9ap4edm43mmtq01oddj6 unique (username)
+Hibernate: alter table if exists enrollment add constraint FKbhhcqkw1px6yljqg92m0sh2gt foreign key (course_id) references course
+Hibernate: alter table if exists enrollment add constraint FKl16dtl7cgm3p2kfip5pml5jsh foreign key (student_id) references users
+2025-11-06T12:25:54.171-05:00  INFO 27452 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06T12:25:55.969-05:00  WARN 27452 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-06T12:25:57.372-05:00  INFO 27452 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3d707885, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c41b4b, org.springframework.security.web.context.SecurityContextHolderFilter@749ebc39, org.springframework.security.web.header.HeaderWriterFilter@7ebefdfa, org.springframework.web.filter.CorsFilter@55a4a0ab, org.springframework.security.web.authentication.logout.LogoutFilter@68c06a2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52caa9d8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@521981d9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5066a895, org.springframework.security.web.access.ExceptionTranslationFilter@1390cc4c, org.springframework.security.web.access.intercept.AuthorizationFilter@6a7a8e1e]
+2025-11-06T12:25:59.150-05:00  INFO 27452 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 60960 (http) with context path ''
+2025-11-06T12:25:59.176-05:00  INFO 27452 --- [    Test worker] c.a.b.c.CucumberSpringConfiguration      : Started CucumberSpringConfiguration in 19.23 seconds (process running for 27.754)
+Hibernate: select count(*) from course c1_0
+Hibernate: insert into course (category,level,title,id) values (?,?,?,default)
+Hibernate: insert into course (category,level,title,id) values (?,?,?,default)
+Hibernate: insert into course (category,level,title,id) values (?,?,?,default)
+Hibernate: insert into course (category,level,title,id) values (?,?,?,default)
+Hibernate: insert into course (category,level,title,id) values (?,?,?,default)
+Hibernate: insert into course (category,level,title,id) values (?,?,?,default)
+Hibernate: insert into course (category,level,title,id) values (?,?,?,default)
+Hibernate: select count(*) from users u1_0
+Hibernate: insert into users (password,role,username,id) values (?,?,?,default)
+Hibernate: insert into users (password,role,username,id) values (?,?,?,default)
+
+Scenario: Crear un usuario                                            ?[90m# features/gestion_usuario.feature:3?[0m
+  ?[32mGiven ?[0m?[32mque quiero crear un usuario con nombre ?[0m?[32m?[1m"juan"?[0m?[32m y rol ?[0m?[32m?[1m"STUDENT"?[0m ?[90m# com.academy.bdd.stepdefs.GestionarUsuarioStepDefinitions.que_quiero_crear_un_usuario_con_nombre_y_rol(java.lang.String,java.lang.String)?[0m
+2025-11-06T12:26:07.654-05:00  INFO 27452 --- [o-auto-1-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-06T12:26:07.654-05:00  INFO 27452 --- [o-auto-1-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-06T12:26:07.656-05:00  INFO 27452 --- [o-auto-1-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-11-06T12:26:07.707-05:00  WARN 27452 --- [o-auto-1-exec-2] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/users' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+Hibernate: insert into users (password,role,username,id) values (?,?,?,default)
+2025-11-06T12:26:07.976-05:00  INFO 27452 --- [    Test worker] n.s.r.d.r.RequestSpecificationDecorated  : No BaseStepListener, POST /api/users not registered.
+  ?[32mWhen ?[0m?[32menvÃ­o la peticiÃ³n de creaciÃ³n?[0m                                  ?[90m# com.academy.bdd.stepdefs.GestionarUsuarioStepDefinitions.envio_la_peticion_de_creacion()?[0m
+  ?[32mThen ?[0m?[32mrecibo cÃ³digo ?[0m?[32m?[1m201?[0m                                              ?[90m# com.academy.bdd.stepdefs.GestionarUsuarioStepDefinitions.recibo_codigo(java.lang.Integer)?[0m
+2025-11-06T12:26:08.245-05:00  INFO 27452 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.academy.bdd.config.CucumberSpringConfiguration]: CucumberSpringConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-06T12:26:08.257-05:00  INFO 27452 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.academy.Application for test class com.academy.bdd.config.CucumberSpringConfiguration
+
+Scenario: Usuario inicia sesiÃ³n correctamente ?[90m# features/login.feature:3?[0m
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: insert into users (password,role,username,id) values (?,?,?,default)
+  ?[32mGiven ?[0m?[32mel usuario tiene credenciales vÃ¡lidas?[0m ?[90m# com.academy.bdd.stepdefs.RegistroSteps.userHasValidCredentials()?[0m
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+  ?[32mWhen ?[0m?[32mintenta iniciar sesiÃ³n?[0m                 ?[90m# com.academy.bdd.stepdefs.RegistroSteps.userAttemptsLogin()?[0m
+  ?[32mThen ?[0m?[32mrecibe un token JWT?[0m                    ?[90m# com.academy.bdd.stepdefs.RegistroSteps.userReceivesJwtToken()?[0m
+2025-11-06T12:26:10.037-05:00  INFO 27452 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.academy.bdd.config.CucumberSpringConfiguration]: CucumberSpringConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-06T12:26:10.039-05:00  INFO 27452 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.academy.Application for test class com.academy.bdd.config.CucumberSpringConfiguration
+
+Scenario: Estudiante se matricula en un curso       ?[90m# features/matricula_curso.feature:3?[0m
+Hibernate: insert into course (category,level,title,id) values (?,?,?,default)
+  ?[32mGiven ?[0m?[32mexiste un curso disponible?[0m                  ?[90m# com.academy.bdd.stepdefs.RegistroSteps.courseIsAvailable()?[0m
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: insert into users (password,role,username,id) values (?,?,?,default)
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+  ?[32mAnd ?[0m?[32mexiste un usuario registrado?[0m                  ?[90m# com.academy.bdd.stepdefs.RegistroSteps.registeredUserExists()?[0m
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.id=?
+Hibernate: select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0 where c1_0.id=?
+Hibernate: insert into enrollment (course_id,student_id,id) values (?,?,default)
+  ?[32mWhen ?[0m?[32mel usuario solicita matricularse en el curso?[0m ?[90m# com.academy.bdd.stepdefs.RegistroSteps.userRequestsEnrollment()?[0m
+  ?[32mThen ?[0m?[32mla matricula se realiza con Ã©xito?[0m            ?[90m# com.academy.bdd.stepdefs.RegistroSteps.enrollmentIsSuccessful()?[0m
+2025-11-06T12:26:10.326-05:00  INFO 27452 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.academy.bdd.config.CucumberSpringConfiguration]: CucumberSpringConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-06T12:26:10.329-05:00  INFO 27452 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.academy.Application for test class com.academy.bdd.config.CucumberSpringConfiguration
+
+Scenario: Successful user registration                                        ?[90m# features/registration.feature:6?[0m
+  ?[32mGiven ?[0m?[32mI have a new user with username ?[0m?[32m?[1m"testuser"?[0m?[32m and password ?[0m?[32m?[1m"password123"?[0m ?[90m# com.academy.bdd.stepdefs.RegistrationSteps.iHaveANewUser(java.lang.String,java.lang.String)?[0m
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: insert into users (password,role,username,id) values (?,?,?,default)
+  ?[32mWhen ?[0m?[32mI submit the registration request?[0m                                      ?[90m# com.academy.bdd.stepdefs.RegistrationSteps.iSubmitTheRegistrationRequest()?[0m
+  ?[32mThen ?[0m?[32mthe registration should be successful?[0m                                  ?[90m# com.academy.bdd.stepdefs.RegistrationSteps.theRegistrationShouldBeSuccessful()?[0m
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+  ?[32mAnd ?[0m?[32mI should receive a JWT token?[0m                                            ?[90m# com.academy.bdd.stepdefs.RegistrationSteps.iShouldReceiveAJWTToken()?[0m
+2025-11-06T12:26:10.490-05:00  INFO 27452 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.academy.bdd.config.CucumberSpringConfiguration]: CucumberSpringConfiguration does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-06T12:26:10.492-05:00  INFO 27452 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.academy.Application for test class com.academy.bdd.config.CucumberSpringConfiguration
+
+Scenario: Usuario se registra exitosamente          ?[90m# features/registro_usuario.feature:3?[0m
+  ?[32mGiven ?[0m?[32mel usuario accede al formulario de registro?[0m ?[90m# com.academy.bdd.stepdefs.RegistroSteps.userAccessesRegistrationForm()?[0m
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: insert into users (password,role,username,id) values (?,?,?,default)
+  ?[32mWhen ?[0m?[32mcompleta sus datos y envÃ­a el formulario?[0m     ?[90m# com.academy.bdd.stepdefs.RegistroSteps.userFillsAndSubmitsForm()?[0m
+  ?[32mThen ?[0m?[32mel sistema confirma el registro exitoso?[0m      ?[90m# com.academy.bdd.stepdefs.RegistroSteps.systemConfirmsRegistration()?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

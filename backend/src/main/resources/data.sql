@@ -1,0 +1,2 @@
+-- data.sql disabled
+-- data.sql disabled: using DataLoader.java to populate sample data during application startup

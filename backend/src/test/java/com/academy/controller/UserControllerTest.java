@@ -16,6 +16,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.academy.model.User;
 import com.academy.repository.UserRepository;
+import com.academy.repository.EnrollmentRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootTest
@@ -23,10 +24,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class UserControllerTest {
     @Autowired MockMvc mockMvc;
     @Autowired UserRepository userRepo;
+    @Autowired EnrollmentRepository enrollmentRepo;
     @Autowired ObjectMapper objectMapper;
 
     @BeforeEach
-    void setup() { userRepo.deleteAll(); }
+    void setup() { 
+        enrollmentRepo.deleteAll();
+        userRepo.deleteAll(); 
+    }
 
     @Test
     void testCRUD() throws Exception {

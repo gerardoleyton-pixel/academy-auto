@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.029s</div>
+<div class="counter">0.079s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">testCRUD()</td>
-<td class="success">0.029s</td>
+<td class="success">0.079s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,8 +87,55 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-11-05T17:58:59.883-05:00  INFO 24284 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.academy.controller.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-11-05T17:58:59.885-05:00  INFO 24284 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.academy.Application for test class com.academy.controller.UserControllerTest
+<pre>2025-11-06T12:26:15.147-05:00  INFO 27452 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.academy.controller.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-06T12:26:15.152-05:00  INFO 27452 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.academy.Application for test class com.academy.controller.UserControllerTest
+2025-11-06T12:26:15.199-05:00  INFO 27452 --- [    Test worker]                                          : 
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at http://www.serenity-bdd.info                                  
+ Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
+ Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
+ Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
+-------------------------------------------------------------------------------------
+
+2025-11-06T12:26:15.218-05:00  INFO 27452 --- [    Test worker]                                          : Test Suite Started: UserControllerTest
+2025-11-06T12:26:15.220-05:00  INFO 27452 --- [    Test worker]                                          : Test Suite Started: UserControllerTest
+2025-11-06T12:26:15.321-05:00  INFO 27452 --- [    Test worker]                                          : 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+testCRUD()([engine:junit-jupiter]/[class:com.academy.controller.UserControllerTest]/[method:testCRUD()])
+--------------------------------------------------------------------------------
+2025-11-06T12:26:15.321-05:00  INFO 27452 --- [    Test worker]                                          : 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+testCRUD()([engine:junit-jupiter]/[class:com.academy.controller.UserControllerTest]/[method:testCRUD()])
+--------------------------------------------------------------------------------
+Hibernate: select e1_0.id,e1_0.course_id,e1_0.student_id from enrollment e1_0
+Hibernate: select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0 where c1_0.id=?
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.id=?
+Hibernate: delete from enrollment where id=?
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0
+Hibernate: delete from users where id=?
+Hibernate: insert into users (password,role,username,id) values (?,?,?,default)
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.id=?
+Hibernate: update users set password=?,role=?,username=? where id=?
+Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.id=?
+Hibernate: delete from users where id=?
 </pre>
 </span>
 </div>
@@ -100,7 +147,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.5</a> at 5/11/2025, 5:59:00 p. m.</p>
+<a href="http://www.gradle.org">Gradle 8.5</a> at 6/11/2025, 12:26:20 p. m.</p>
 </div>
 </div>
 </body>

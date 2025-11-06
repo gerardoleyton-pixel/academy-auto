@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.gerardoleyton.integration.AuthIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-06T17:26:18" hostname="PARCEGER" time="0.63">
+  <properties/>
+  <testcase name="registerAndLogin()" classname="com.gerardoleyton.integration.AuthIntegrationTest" time="0.63"/>
+  <system-out><![CDATA[2025-11-06T12:26:15.430-05:00  INFO 27452 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.gerardoleyton.integration.AuthIntegrationTest]: AuthIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-06T12:26:15.460-05:00  INFO 27452 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.gerardoleyton.AcademyApplication for test class com.gerardoleyton.integration.AuthIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2025-11-06T12:26:15.536-05:00  WARN 27452 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/user/.gradle/caches/modules-2/files-2.1/org.json/json/20231013/e22e0c040fe16f04ffdb85d851d77b07fc05ea52/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/user/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-11-06T12:26:15.546-05:00  INFO 27452 --- [    Test worker] c.g.integration.AuthIntegrationTest      : Starting AuthIntegrationTest using Java 17.0.12 with PID 27452 (started by ParceGer in C:\Users\user\Documents\sofka\academy-auto\backend)
+2025-11-06T12:26:15.547-05:00  INFO 27452 --- [    Test worker] c.g.integration.AuthIntegrationTest      : No active profile set, falling back to 1 default profile: "default"
+2025-11-06T12:26:16.297-05:00  INFO 27452 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-06T12:26:16.395-05:00  INFO 27452 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 2 JPA repository interfaces.
+2025-11-06T12:26:16.937-05:00  INFO 27452 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-11-06T12:26:16.941-05:00  INFO 27452 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-06T12:26:16.943-05:00  INFO 27452 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-11-06T12:26:17.084-05:00  INFO 27452 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-11-06T12:26:17.084-05:00  INFO 27452 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1534 ms
+2025-11-06T12:26:17.112-05:00  INFO 27452 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-11-06T12:26:17.114-05:00  INFO 27452 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:academydb user=SA
+2025-11-06T12:26:17.114-05:00  INFO 27452 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-11-06T12:26:17.115-05:00  INFO 27452 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:academydb'
+2025-11-06T12:26:17.176-05:00  INFO 27452 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-06T12:26:17.187-05:00  INFO 27452 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-06T12:26:17.202-05:00  INFO 27452 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-06T12:26:17.207-05:00  WARN 27452 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-06T12:26:17.544-05:00  INFO 27452 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: alter table if exists course add column description varchar(255)
+Hibernate: create table course_students (course_id bigint not null, user_id bigint not null, primary key (course_id, user_id))
+Hibernate: alter table if exists users add column email varchar(255)
+Hibernate: alter table if exists course_students add constraint FKq1158o0xpbhoxtihu2w854c8j foreign key (user_id) references users
+Hibernate: alter table if exists course_students add constraint FKgut5xj4l8sk6hg3l0t2su2pnc foreign key (course_id) references course
+2025-11-06T12:26:17.681-05:00  INFO 27452 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06T12:26:18.002-05:00  WARN 27452 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-06T12:26:18.179-05:00  INFO 27452 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b2d02ad, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2aa398f3, org.springframework.security.web.context.SecurityContextHolderFilter@4ae707c, org.springframework.security.web.header.HeaderWriterFilter@2f8892c5, org.springframework.web.filter.CorsFilter@54b5b046, org.springframework.security.web.authentication.logout.LogoutFilter@4c7108ce, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@288aaeaf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50de1c33, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@309c39dc, org.springframework.security.web.access.ExceptionTranslationFilter@79703b86, org.springframework.security.web.access.intercept.AuthorizationFilter@1e3f5e42]
+2025-11-06T12:26:18.428-05:00  INFO 27452 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 50833 (http) with context path ''
+2025-11-06T12:26:18.434-05:00  INFO 27452 --- [    Test worker] c.g.integration.AuthIntegrationTest      : Started AuthIntegrationTest in 2.968 seconds (process running for 47.013)
+2025-11-06T12:26:18.478-05:00  INFO 27452 --- [    Test worker]                                          : 
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at http://www.serenity-bdd.info                                  
+ Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
+ Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
+ Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
+-------------------------------------------------------------------------------------
+
+2025-11-06T12:26:18.509-05:00  INFO 27452 --- [    Test worker]                                          : Test Suite Started: AuthIntegrationTest
+2025-11-06T12:26:18.509-05:00  INFO 27452 --- [    Test worker]                                          : Test Suite Started: AuthIntegrationTest
+2025-11-06T12:26:18.610-05:00  INFO 27452 --- [    Test worker]                                          : 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+registerAndLogin()([engine:junit-jupiter]/[class:com.gerardoleyton.integration.AuthIntegrationTest]/[method:registerAndLogin()])
+--------------------------------------------------------------------------------
+2025-11-06T12:26:18.610-05:00  INFO 27452 --- [    Test worker]                                          : 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+registerAndLogin()([engine:junit-jupiter]/[class:com.gerardoleyton.integration.AuthIntegrationTest]/[method:registerAndLogin()])
+--------------------------------------------------------------------------------
+2025-11-06T12:26:18.766-05:00  INFO 27452 --- [o-auto-2-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-06T12:26:18.766-05:00  INFO 27452 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-06T12:26:18.768-05:00  INFO 27452 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-11-06T12:26:18.771-05:00  WARN 27452 --- [o-auto-2-exec-1] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/auth/register' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+Hibernate: insert into users (email,password,role,username,id) values (?,?,?,?,default)
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
