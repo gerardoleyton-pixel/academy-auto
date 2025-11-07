@@ -113,7 +113,9 @@ test {
         'serenity.reports.show.step.details': 'true',
         'serenity.test.root': 'src/test/resources/features',
         'cucumber.publish.quiet': 'true',
-        'cucumber.filter.tags': System.getProperty('cucumber.filter.tags', '')
+            'cucumber.filter.tags': System.getProperty('cucumber.filter.tags', ''),
+            // Prefer the Spring object factory when multiple factories are on the classpath
+            'cucumber.object-factory': 'io.cucumber.spring.SpringFactory'
     ]
     testLogging {
         events 'passed', 'skipped', 'failed'
@@ -131,7 +133,10 @@ configurations {
 }
 
 tasks.withType(Test) {
-    systemProperty "serenity.outputDirectory", "${project.reporting.baseDir}/serenity"
+    // Ensure Serenity writes outcome files into the build/serenity folder which the
+    // aggregator reads. Previously this used project.reporting.baseDir (build/reports)
+    // which caused the aggregator to find 0 tests.
+    systemProperty "serenity.outputDirectory", "${project.buildDir}/serenity"
     systemProperty "serenity.project.name", "Academy Backend BDD Tests"
     finalizedBy(tasks.aggregate)
 }
