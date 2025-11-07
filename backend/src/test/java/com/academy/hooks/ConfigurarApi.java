@@ -1,20 +1,28 @@
-package com.academy.bdd.hooks;
+package com.academy.hooks;
 
 import io.cucumber.java.Before;
 import io.restassured.RestAssured;
-import org.springframework.boot.test.web.server.LocalServerPort;
+import io.restassured.config.LogConfig;
+import net.serenitybdd.rest.SerenityRest;
+import org.springframework.beans.factory.annotation.Value;
 
-/**
- * Cucumber hook to configure REST base URI for API tests. Runs after Spring context is available
- */
 public class ConfigurarApi {
 
-    @LocalServerPort
+    @Value("${local.server.port}")
     private int port;
 
     @Before
-    public void setup() {
-        // Use the random port the embedded server started on during tests
-        RestAssured.baseURI = System.getProperty("base.uri", "http://localhost:" + port);
+    public void configurarApi() {
+        RestAssured.port = port;
+        RestAssured.baseURI = "http://localhost";
+        
+        // Configurar logging detallado para diagnóstico
+        RestAssured.config = RestAssured.config()
+            .logConfig(LogConfig.logConfig()
+                .enableLoggingOfRequestAndResponseIfValidationFails());
+                
+        // Configurar Serenity para usar la misma configuración
+        SerenityRest.setDefaultPort(port);
+        SerenityRest.setDefaultBasePath("");
     }
 }

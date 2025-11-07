@@ -1,10 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.gerardoleyton.integration.CourseIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-06T17:26:19" hostname="PARCEGER" time="0.158">
+<testsuite name="com.gerardoleyton.integration.CourseIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-07T19:48:19" hostname="PARCEGER" time="1.217">
   <properties/>
-  <testcase name="createAndListCourses()" classname="com.gerardoleyton.integration.CourseIntegrationTest" time="0.158"/>
-  <system-out><![CDATA[2025-11-06T12:26:19.253-05:00  INFO 27452 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.gerardoleyton.integration.CourseIntegrationTest]: CourseIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-11-06T12:26:19.256-05:00  INFO 27452 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.gerardoleyton.AcademyApplication for test class com.gerardoleyton.integration.CourseIntegrationTest
-2025-11-06T12:26:19.297-05:00  INFO 27452 --- [    Test worker]                                          : 
+  <testcase name="createAndListCourses()" classname="com.gerardoleyton.integration.CourseIntegrationTest" time="1.217"/>
+  <system-out><![CDATA[2025-11-07T14:48:08.780-05:00  INFO 15816 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.gerardoleyton.integration.CourseIntegrationTest]: CourseIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-07T14:48:08.838-05:00  INFO 15816 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.gerardoleyton.AcademyApplication for test class com.gerardoleyton.integration.CourseIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2025-11-07T14:48:09.565-05:00  WARN 15816 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/user/.gradle/caches/modules-2/files-2.1/org.json/json/20231013/e22e0c040fe16f04ffdb85d851d77b07fc05ea52/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/user/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-11-07T14:48:09.566-05:00  INFO 15816 --- [    Test worker] c.g.integration.CourseIntegrationTest    : Starting CourseIntegrationTest using Java 17.0.12 with PID 15816 (started by ParceGer in C:\Users\user\Documents\sofka\academy-auto\backend)
+2025-11-07T14:48:09.566-05:00  INFO 15816 --- [    Test worker] c.g.integration.CourseIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2025-11-07T14:48:13.892-05:00  INFO 15816 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-07T14:48:13.946-05:00  INFO 15816 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 2 JPA repository interfaces.
+2025-11-07T14:48:14.797-05:00  INFO 15816 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-11-07T14:48:14.807-05:00  INFO 15816 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-07T14:48:14.808-05:00  INFO 15816 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-11-07T14:48:15.632-05:00  INFO 15816 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-11-07T14:48:15.635-05:00  INFO 15816 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6066 ms
+2025-11-07T14:48:15.673-05:00  INFO 15816 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-11-07T14:48:15.677-05:00  INFO 15816 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
+2025-11-07T14:48:15.678-05:00  INFO 15816 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-11-07T14:48:15.679-05:00  INFO 15816 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-11-07T14:48:15.773-05:00  INFO 15816 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-07T14:48:15.815-05:00  INFO 15816 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-07T14:48:15.840-05:00  INFO 15816 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-07T14:48:15.843-05:00  WARN 15816 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-07T14:48:16.859-05:00  INFO 15816 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-07T14:48:16.860-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : drop table if exists course cascade 
+Hibernate: drop table if exists course cascade 
+2025-11-07T14:48:16.863-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : drop table if exists course_students cascade 
+Hibernate: drop table if exists course_students cascade 
+2025-11-07T14:48:16.865-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : drop table if exists users cascade 
+Hibernate: drop table if exists users cascade 
+2025-11-07T14:48:16.871-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : create table course (id bigint generated by default as identity, description varchar(255), title varchar(255), primary key (id))
+Hibernate: create table course (id bigint generated by default as identity, description varchar(255), title varchar(255), primary key (id))
+2025-11-07T14:48:16.876-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : create table course_students (course_id bigint not null, user_id bigint not null, primary key (course_id, user_id))
+Hibernate: create table course_students (course_id bigint not null, user_id bigint not null, primary key (course_id, user_id))
+2025-11-07T14:48:16.880-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : create table users (id bigint generated by default as identity, email varchar(255), password varchar(255) not null, role varchar(255) not null, username varchar(255) not null unique, primary key (id))
+Hibernate: create table users (id bigint generated by default as identity, email varchar(255), password varchar(255) not null, role varchar(255) not null, username varchar(255) not null unique, primary key (id))
+2025-11-07T14:48:16.890-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : alter table if exists course_students add constraint FKq1158o0xpbhoxtihu2w854c8j foreign key (user_id) references users
+Hibernate: alter table if exists course_students add constraint FKq1158o0xpbhoxtihu2w854c8j foreign key (user_id) references users
+2025-11-07T14:48:16.898-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : alter table if exists course_students add constraint FKgut5xj4l8sk6hg3l0t2su2pnc foreign key (course_id) references course
+Hibernate: alter table if exists course_students add constraint FKgut5xj4l8sk6hg3l0t2su2pnc foreign key (course_id) references course
+2025-11-07T14:48:16.927-05:00  INFO 15816 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-07T14:48:17.745-05:00  WARN 15816 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-07T14:48:18.295-05:00  INFO 15816 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@24002c5e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69593608, org.springframework.security.web.context.SecurityContextHolderFilter@14419666, org.springframework.security.web.header.HeaderWriterFilter@767b61a1, org.springframework.web.filter.CorsFilter@7ea887ee, org.springframework.security.web.authentication.logout.LogoutFilter@3108f0a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a33872d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@439be00, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@106dff98, org.springframework.security.web.access.ExceptionTranslationFilter@262312f1, org.springframework.security.web.access.intercept.AuthorizationFilter@f8c34ef]
+2025-11-07T14:48:19.172-05:00  INFO 15816 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 53036 (http) with context path ''
+2025-11-07T14:48:19.193-05:00  INFO 15816 --- [    Test worker] c.g.integration.CourseIntegrationTest    : Started CourseIntegrationTest in 10.276 seconds (process running for 156.774)
+2025-11-07T14:48:19.421-05:00  INFO 15816 --- [    Test worker]                                          : ?[96m
 
 -------------------------------------------------------------------------------------
      _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
@@ -19,10 +76,10 @@
  Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
  Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
 -------------------------------------------------------------------------------------
-
-2025-11-06T12:26:19.321-05:00  INFO 27452 --- [    Test worker]                                          : Test Suite Started: CourseIntegrationTest
-2025-11-06T12:26:19.321-05:00  INFO 27452 --- [    Test worker]                                          : Test Suite Started: CourseIntegrationTest
-2025-11-06T12:26:19.405-05:00  INFO 27452 --- [    Test worker]                                          : 
+?[0m
+2025-11-07T14:48:19.472-05:00  INFO 15816 --- [    Test worker]                                          : Test Suite Started: CourseIntegrationTest
+2025-11-07T14:48:19.474-05:00  INFO 15816 --- [    Test worker]                                          : Test Suite Started: CourseIntegrationTest
+2025-11-07T14:48:19.739-05:00  INFO 15816 --- [    Test worker]                                          : 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
@@ -30,7 +87,7 @@
 
 createAndListCourses()([engine:junit-jupiter]/[class:com.gerardoleyton.integration.CourseIntegrationTest]/[method:createAndListCourses()])
 --------------------------------------------------------------------------------
-2025-11-06T12:26:19.407-05:00  INFO 27452 --- [    Test worker]                                          : 
+2025-11-07T14:48:19.740-05:00  INFO 15816 --- [    Test worker]                                          : 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
@@ -38,9 +95,15 @@ createAndListCourses()([engine:junit-jupiter]/[class:com.gerardoleyton.integrati
 
 createAndListCourses()([engine:junit-jupiter]/[class:com.gerardoleyton.integration.CourseIntegrationTest]/[method:createAndListCourses()])
 --------------------------------------------------------------------------------
+2025-11-07T14:48:20.285-05:00  INFO 15816 --- [o-auto-2-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-07T14:48:20.285-05:00  INFO 15816 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-07T14:48:20.287-05:00  INFO 15816 --- [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-11-07T14:48:20.288-05:00  WARN 15816 --- [o-auto-2-exec-1] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/courses' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-11-07T14:48:20.342-05:00 DEBUG 15816 --- [o-auto-2-exec-1] org.hibernate.SQL                        : insert into course (description,title,id) values (?,?,default)
 Hibernate: insert into course (description,title,id) values (?,?,default)
+2025-11-07T14:48:20.924-05:00 DEBUG 15816 --- [o-auto-2-exec-3] org.hibernate.SQL                        : select c1_0.id,c1_0.description,c1_0.title from course c1_0
 Hibernate: select c1_0.id,c1_0.description,c1_0.title from course c1_0
-Hibernate: select s1_0.course_id,s1_1.id,s1_1.email,s1_1.password,s1_1.role,s1_1.username from course_students s1_0 join users s1_1 on s1_1.id=s1_0.user_id where s1_0.course_id=?
+2025-11-07T14:48:20.953-05:00 DEBUG 15816 --- [o-auto-2-exec-3] org.hibernate.SQL                        : select s1_0.course_id,s1_1.id,s1_1.email,s1_1.password,s1_1.role,s1_1.username from course_students s1_0 join users s1_1 on s1_1.id=s1_0.user_id where s1_0.course_id=?
 Hibernate: select s1_0.course_id,s1_1.id,s1_1.email,s1_1.password,s1_1.role,s1_1.username from course_students s1_0 join users s1_1 on s1_1.id=s1_0.user_id where s1_0.course_id=?
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

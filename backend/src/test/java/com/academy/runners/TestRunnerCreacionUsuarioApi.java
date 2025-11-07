@@ -1,11 +1,18 @@
 package com.academy.runners;
 
-import io.cucumber.spring.CucumberContextConfiguration;
-import org.springframework.boot.test.context.SpringBootTest;
-import com.academy.Application;
+import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
+import static io.cucumber.junit.platform.engine.Constants.GLUE_PROPERTY_NAME;
 
-@CucumberContextConfiguration
-@SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+import org.junit.platform.suite.api.ConfigurationParameter;
+import org.junit.platform.suite.api.IncludeEngines;
+import org.junit.platform.suite.api.SelectClasspathResource;
+import org.junit.platform.suite.api.Suite;
+
+@Suite
+@IncludeEngines("cucumber")
+@SelectClasspathResource("features/gestion_usuario.feature")
+@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty,timeline:build/test-results/timeline,summary")
+@ConfigurationParameter(key = "cucumber.object-factory", value = "io.cucumber.spring.SpringFactory")
+@ConfigurationParameter(key = "cucumber.glue", value = "com.academy.bdd")
 public class TestRunnerCreacionUsuarioApi {
-    // Runner class to bootstrap Spring context for Cucumber API tests
 }

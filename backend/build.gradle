@@ -1,33 +1,56 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:3.9.8")
+    }
+}
+
 plugins {
+    id 'java'
     id 'org.springframework.boot' version '3.2.0'
     id 'io.spring.dependency-management' version '1.1.4'
-    id 'java'
+}
+
+apply plugin: 'base'
+apply plugin: 'net.serenity-bdd.serenity-gradle-plugin'
+
+serenity {
+    reports = ["single-page-html"]
+    requirementsBaseDir = "src/test/resources/features"
+}
+
+tasks.withType(Test) {
+    systemProperty "serenity.report.encoding", "UTF-8"
+    systemProperty "webdriver.timeouts.implicitlywait", "10000"
+    systemProperty "serenity.take.screenshots", "FOR_FAILURES"
+}
+
+
+repositories {
+    mavenCentral()
+    gradlePluginPortal()
 }
 
 springBoot {
-    mainClass = 'com.academy.Application'
+    mainClass = 'com.academy.BackendApplication'
 }
 
 group = 'com.academy'
 version = '0.0.1-SNAPSHOT'
 
-// Forzar toolchain de Java para reproducibilidad (usar Java 17 por estabilidad con Spring Boot 3.2)
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 
-// Compatibilidad de compilación / release
-sourceCompatibility = '17'
-targetCompatibility = '17'
-
-tasks.withType(org.gradle.api.tasks.compile.JavaCompile).configureEach {
-    options.release = 17
-}
-
-repositories {
-    mavenCentral()
+compileJava {
+    sourceCompatibility = '17'
+    targetCompatibility = '17'
+    options.encoding = 'UTF-8'
 }
 
 dependencies {
@@ -64,6 +87,7 @@ dependencies {
     testImplementation 'net.serenity-bdd:serenity-core:3.9.8'
     testImplementation 'net.serenity-bdd:serenity-junit5:3.9.8'
     testImplementation 'net.serenity-bdd:serenity-rest-assured:3.9.8'
+    testImplementation 'net.serenity-bdd:serenity-cucumber:3.9.8'
     // Screenplay support for REST interactions
     testImplementation 'net.serenity-bdd:serenity-screenplay:3.9.8'
     testImplementation 'net.serenity-bdd:serenity-screenplay-rest:3.9.8'
@@ -73,20 +97,41 @@ dependencies {
     testImplementation 'org.hamcrest:hamcrest:2.2'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    // Add JUnit 4 so JUnit4-style runners (CucumberWithSerenity) can compile
+    testImplementation 'junit:junit:4.13.2'
+
+    // Allow JUnit4 tests to be discovered and run on the JUnit Platform
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.9.3'
 }
 
 test {
     useJUnitPlatform()
-    systemProperty "serenity.project.name", "Academy Backend BDD Tests"
-    systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags", "")
+    systemProperties = [
+        'serenity.project.name': 'Academy Backend BDD Tests',
+        'serenity.console.colors': 'true',
+        'serenity.logging': 'VERBOSE',
+        'serenity.reports.show.step.details': 'true',
+        'serenity.test.root': 'src/test/resources/features',
+        'cucumber.publish.quiet': 'true',
+        'cucumber.filter.tags': System.getProperty('cucumber.filter.tags', '')
+    ]
     testLogging {
-        events "passed", "skipped", "failed"
-        exceptionFormat "full"
+        events 'passed', 'skipped', 'failed'
+        exceptionFormat 'full'
+        showStandardStreams = true
     }
+    maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
+    finalizedBy 'aggregate'
 }
 
 configurations {
     cucumberRuntime {
         extendsFrom testImplementation
     }
+}
+
+tasks.withType(Test) {
+    systemProperty "serenity.outputDirectory", "${project.reporting.baseDir}/serenity"
+    systemProperty "serenity.project.name", "Academy Backend BDD Tests"
+    finalizedBy(tasks.aggregate)
 }

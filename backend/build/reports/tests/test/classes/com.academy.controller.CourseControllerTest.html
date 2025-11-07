@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.461s</div>
+<div class="counter">1.617s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">testCRUD()</td>
-<td class="success">0.461s</td>
+<td class="success">1.617s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,8 +87,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-11-06T12:26:10.668-05:00  INFO 27452 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.academy.controller.CourseControllerTest]: CourseControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-11-06T12:26:10.719-05:00  INFO 27452 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.academy.Application for test class com.academy.controller.CourseControllerTest
+<pre>2025-11-07T14:47:41.695-05:00  INFO 15816 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.academy.controller.CourseControllerTest]: CourseControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-07T14:47:41.760-05:00  INFO 15816 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.academy.BackendApplication for test class com.academy.controller.CourseControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -98,7 +98,7 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.0)
 
-2025-11-06T12:26:10.846-05:00  WARN 27452 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+2025-11-07T14:47:42.157-05:00  WARN 15816 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -107,99 +107,150 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2025-11-06T12:26:10.850-05:00  INFO 27452 --- [    Test worker] c.a.controller.CourseControllerTest      : Starting CourseControllerTest using Java 17.0.12 with PID 27452 (started by ParceGer in C:\Users\user\Documents\sofka\academy-auto\backend)
-2025-11-06T12:26:10.851-05:00  INFO 27452 --- [    Test worker] c.a.controller.CourseControllerTest      : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2025-11-06T12:26:11.939-05:00  INFO 27452 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-11-06T12:26:11.988-05:00  INFO 27452 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 3 JPA repository interfaces.
-2025-11-06T12:26:12.295-05:00  INFO 27452 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-11-06T12:26:12.307-05:00  INFO 27452 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-11-06T12:26:12.324-05:00  INFO 27452 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-11-06T12:26:12.329-05:00  INFO 27452 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2025-11-06T12:26:12.332-05:00  INFO 27452 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:academydb user=SA
-2025-11-06T12:26:12.332-05:00  INFO 27452 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2025-11-06T12:26:12.334-05:00  WARN 27452 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-11-06T12:26:12.461-05:00  INFO 27452 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-11-06T12:26:12.491-05:00  INFO 27452 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-11-06T12:26:12.855-05:00  WARN 27452 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-11-06T12:26:13.173-05:00  INFO 27452 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@643ba7ba, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a6f9ca5, org.springframework.security.web.context.SecurityContextHolderFilter@1cf676b8, org.springframework.security.web.header.HeaderWriterFilter@111c2c9c, org.springframework.web.filter.CorsFilter@9c44b, org.springframework.security.web.authentication.logout.LogoutFilter@53ae8844, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@501904ff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c4ac71b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3602728c, org.springframework.security.web.access.ExceptionTranslationFilter@a7adeb1, org.springframework.security.web.access.intercept.AuthorizationFilter@927e34d]
-2025-11-06T12:26:13.463-05:00  INFO 27452 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:academydb'
-2025-11-06T12:26:13.557-05:00  INFO 27452 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-11-06T12:26:13.557-05:00  INFO 27452 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-11-06T12:26:13.562-05:00  INFO 27452 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
-2025-11-06T12:26:13.687-05:00  INFO 27452 --- [    Test worker] c.a.controller.CourseControllerTest      : Started CourseControllerTest in 2.928 seconds (process running for 42.265)
+2025-11-07T14:47:42.159-05:00  INFO 15816 --- [    Test worker] c.a.controller.CourseControllerTest      : Starting CourseControllerTest using Java 17.0.12 with PID 15816 (started by ParceGer in C:\Users\user\Documents\sofka\academy-auto\backend)
+2025-11-07T14:47:42.159-05:00 DEBUG 15816 --- [    Test worker] c.a.controller.CourseControllerTest      : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-11-07T14:47:42.160-05:00  INFO 15816 --- [    Test worker] c.a.controller.CourseControllerTest      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-11-07T14:47:44.809-05:00  INFO 15816 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-07T14:47:44.943-05:00  INFO 15816 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 133 ms. Found 3 JPA repository interfaces.
+2025-11-07T14:47:45.893-05:00  INFO 15816 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-07T14:47:46.095-05:00  INFO 15816 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-07T14:47:46.143-05:00  INFO 15816 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-07T14:47:46.150-05:00  INFO 15816 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-11-07T14:47:46.155-05:00  INFO 15816 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2025-11-07T14:47:46.155-05:00  INFO 15816 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-11-07T14:47:46.156-05:00  WARN 15816 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-07T14:47:47.393-05:00  INFO 15816 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-07T14:47:47.395-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : drop table if exists course cascade 
+Hibernate: drop table if exists course cascade 
+2025-11-07T14:47:47.437-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : drop table if exists enrollment cascade 
+Hibernate: drop table if exists enrollment cascade 
+2025-11-07T14:47:47.485-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : drop table if exists users cascade 
+Hibernate: drop table if exists users cascade 
+2025-11-07T14:47:47.494-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : create table course (id bigint generated by default as identity, category varchar(255), level varchar(255), title varchar(255), primary key (id))
+Hibernate: create table course (id bigint generated by default as identity, category varchar(255), level varchar(255), title varchar(255), primary key (id))
+2025-11-07T14:47:47.503-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : create table enrollment (course_id bigint not null, id bigint generated by default as identity, student_id bigint not null, primary key (id))
+Hibernate: create table enrollment (course_id bigint not null, id bigint generated by default as identity, student_id bigint not null, primary key (id))
+2025-11-07T14:47:47.518-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : create table users (id bigint generated by default as identity, password varchar(255) not null, role varchar(255) not null, username varchar(255) not null unique, primary key (id))
+Hibernate: create table users (id bigint generated by default as identity, password varchar(255) not null, role varchar(255) not null, username varchar(255) not null unique, primary key (id))
+2025-11-07T14:47:47.970-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : alter table if exists enrollment add constraint FKbhhcqkw1px6yljqg92m0sh2gt foreign key (course_id) references course
+Hibernate: alter table if exists enrollment add constraint FKbhhcqkw1px6yljqg92m0sh2gt foreign key (course_id) references course
+2025-11-07T14:47:47.974-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : alter table if exists enrollment add constraint FKl16dtl7cgm3p2kfip5pml5jsh foreign key (student_id) references users
+Hibernate: alter table if exists enrollment add constraint FKl16dtl7cgm3p2kfip5pml5jsh foreign key (student_id) references users
+2025-11-07T14:47:47.978-05:00  INFO 15816 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-07T14:47:51.248-05:00  WARN 15816 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-07T14:47:55.149-05:00  INFO 15816 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@59010c22, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@29fb1073, org.springframework.security.web.context.SecurityContextHolderFilter@6393a745, org.springframework.security.web.header.HeaderWriterFilter@633f30af, org.springframework.web.filter.CorsFilter@152364f0, org.springframework.security.web.authentication.logout.LogoutFilter@6416b6e3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@545390ab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@e1619a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b60846c, org.springframework.security.web.access.ExceptionTranslationFilter@d8b2da6, org.springframework.security.web.access.intercept.AuthorizationFilter@7d9277f7]
+2025-11-07T14:47:57.857-05:00  INFO 15816 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-11-07T14:47:58.092-05:00 DEBUG 15816 --- [    Test worker] c.academy.config.H2ConsoleHeaderFilter   : Filter 'h2ConsoleHeaderFilter' configured for use
+2025-11-07T14:47:58.093-05:00  INFO 15816 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-11-07T14:47:58.094-05:00  INFO 15816 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-11-07T14:47:58.112-05:00  INFO 15816 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 17 ms
+2025-11-07T14:47:58.725-05:00  INFO 15816 --- [    Test worker] c.a.controller.CourseControllerTest      : Started CourseControllerTest in 16.926 seconds (process running for 136.307)
+2025-11-07T14:47:58.730-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : select count(*) from course c1_0
 Hibernate: select count(*) from course c1_0
-Hibernate: select count(*) from users u1_0
-2025-11-06T12:26:13.944-05:00  INFO 27452 --- [    Test worker]                                          : 
-
--------------------------------------------------------------------------------------
-     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
-    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
-   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
-    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
-.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
-|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
-                                                                                     
- News and tutorials at http://www.serenity-bdd.info                                  
- Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
- Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
- Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
--------------------------------------------------------------------------------------
-
-2025-11-06T12:26:13.961-05:00  INFO 27452 --- [    Test worker]                                          : 
-
--------------------------------------------------------------------------------------
-     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
-    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
-   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
-    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
-.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
-|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
-                                                                                     
- News and tutorials at http://www.serenity-bdd.info                                  
- Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
- Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
- Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
--------------------------------------------------------------------------------------
-
-2025-11-06T12:26:13.997-05:00  INFO 27452 --- [    Test worker]                                          : Test Suite Started: CourseControllerTest
-2025-11-06T12:26:13.998-05:00  INFO 27452 --- [    Test worker]                                          : Test Suite Started: CourseControllerTest
-2025-11-06T12:26:14.228-05:00  INFO 27452 --- [    Test worker]                                          : 
-  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
- |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
-   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
-   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
-
-testCRUD()([engine:junit-jupiter]/[class:com.academy.controller.CourseControllerTest]/[method:testCRUD()])
---------------------------------------------------------------------------------
-2025-11-06T12:26:14.231-05:00  INFO 27452 --- [    Test worker]                                          : 
-  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
- |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
-   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
-   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
-
-testCRUD()([engine:junit-jupiter]/[class:com.academy.controller.CourseControllerTest]/[method:testCRUD()])
---------------------------------------------------------------------------------
-Hibernate: select e1_0.id,e1_0.course_id,e1_0.student_id from enrollment e1_0
-Hibernate: select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0 where c1_0.id=?
-Hibernate: select u1_0.id,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.id=?
-Hibernate: delete from enrollment where id=?
-Hibernate: select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0
-Hibernate: delete from course where id=?
-Hibernate: delete from course where id=?
-Hibernate: delete from course where id=?
-Hibernate: delete from course where id=?
-Hibernate: delete from course where id=?
-Hibernate: delete from course where id=?
-Hibernate: delete from course where id=?
-Hibernate: delete from course where id=?
-2025-11-06T12:26:14.422-05:00  WARN 27452 --- [    Test worker] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/courses' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-11-07T14:47:58.758-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : insert into course (category,level,title,id) values (?,?,?,default)
 Hibernate: insert into course (category,level,title,id) values (?,?,?,default)
+2025-11-07T14:47:58.772-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : insert into course (category,level,title,id) values (?,?,?,default)
+Hibernate: insert into course (category,level,title,id) values (?,?,?,default)
+2025-11-07T14:47:58.975-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : insert into course (category,level,title,id) values (?,?,?,default)
+Hibernate: insert into course (category,level,title,id) values (?,?,?,default)
+2025-11-07T14:47:59.110-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : insert into course (category,level,title,id) values (?,?,?,default)
+Hibernate: insert into course (category,level,title,id) values (?,?,?,default)
+2025-11-07T14:47:59.122-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : insert into course (category,level,title,id) values (?,?,?,default)
+Hibernate: insert into course (category,level,title,id) values (?,?,?,default)
+2025-11-07T14:47:59.127-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : insert into course (category,level,title,id) values (?,?,?,default)
+Hibernate: insert into course (category,level,title,id) values (?,?,?,default)
+2025-11-07T14:47:59.133-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : insert into course (category,level,title,id) values (?,?,?,default)
+Hibernate: insert into course (category,level,title,id) values (?,?,?,default)
+2025-11-07T14:47:59.142-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : select count(*) from users u1_0
+Hibernate: select count(*) from users u1_0
+2025-11-07T14:47:59.177-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : insert into users (password,role,username,id) values (?,?,?,default)
+Hibernate: insert into users (password,role,username,id) values (?,?,?,default)
+2025-11-07T14:47:59.181-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : insert into users (password,role,username,id) values (?,?,?,default)
+Hibernate: insert into users (password,role,username,id) values (?,?,?,default)
+2025-11-07T14:48:04.297-05:00  INFO 15816 --- [    Test worker]                                          : ?[96m
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at http://www.serenity-bdd.info                                  
+ Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
+ Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
+ Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
+-------------------------------------------------------------------------------------
+?[0m
+2025-11-07T14:48:04.308-05:00  INFO 15816 --- [    Test worker]                                          : ?[96m
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at http://www.serenity-bdd.info                                  
+ Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
+ Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
+ Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
+-------------------------------------------------------------------------------------
+?[0m
+2025-11-07T14:48:04.388-05:00  INFO 15816 --- [    Test worker]                                          : Test Suite Started: CourseControllerTest
+2025-11-07T14:48:04.388-05:00  INFO 15816 --- [    Test worker]                                          : Test Suite Started: CourseControllerTest
+2025-11-07T14:48:05.451-05:00  INFO 15816 --- [    Test worker]                                          : 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+testCRUD()([engine:junit-jupiter]/[class:com.academy.controller.CourseControllerTest]/[method:testCRUD()])
+--------------------------------------------------------------------------------
+2025-11-07T14:48:05.454-05:00  INFO 15816 --- [    Test worker]                                          : 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+testCRUD()([engine:junit-jupiter]/[class:com.academy.controller.CourseControllerTest]/[method:testCRUD()])
+--------------------------------------------------------------------------------
+2025-11-07T14:48:05.618-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : select e1_0.id,e1_0.course_id,e1_0.student_id from enrollment e1_0
+Hibernate: select e1_0.id,e1_0.course_id,e1_0.student_id from enrollment e1_0
+2025-11-07T14:48:05.631-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0
 Hibernate: select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0
-Hibernate: select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0
-Hibernate: select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0 where c1_0.id=?
-Hibernate: update course set category=?,level=?,title=? where id=?
-Hibernate: select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0 where c1_0.id=?
+2025-11-07T14:48:05.720-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : delete from course where id=?
 Hibernate: delete from course where id=?
+2025-11-07T14:48:05.722-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : delete from course where id=?
+Hibernate: delete from course where id=?
+2025-11-07T14:48:05.743-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : delete from course where id=?
+Hibernate: delete from course where id=?
+2025-11-07T14:48:05.753-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : delete from course where id=?
+Hibernate: delete from course where id=?
+2025-11-07T14:48:05.766-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : delete from course where id=?
+Hibernate: delete from course where id=?
+2025-11-07T14:48:05.772-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : delete from course where id=?
+Hibernate: delete from course where id=?
+2025-11-07T14:48:05.780-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : delete from course where id=?
+Hibernate: delete from course where id=?
+2025-11-07T14:48:05.919-05:00  WARN 15816 --- [    Test worker] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/courses' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-11-07T14:48:06.009-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : insert into course (category,level,title,id) values (?,?,?,default)
+Hibernate: insert into course (category,level,title,id) values (?,?,?,default)
+2025-11-07T14:48:06.154-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0
+Hibernate: select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0
+2025-11-07T14:48:06.901-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0
+Hibernate: select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0
+2025-11-07T14:48:06.907-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0 where c1_0.id=?
+Hibernate: select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0 where c1_0.id=?
+2025-11-07T14:48:07.132-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : update course set category=?,level=?,title=? where id=?
+Hibernate: update course set category=?,level=?,title=? where id=?
+2025-11-07T14:48:07.139-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0 where c1_0.id=?
+Hibernate: select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0 where c1_0.id=?
+2025-11-07T14:48:07.140-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : delete from course where id=?
+Hibernate: delete from course where id=?
+2025-11-07T14:48:07.147-05:00 DEBUG 15816 --- [    Test worker] org.hibernate.SQL                        : select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0 where c1_0.id=?
 Hibernate: select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0 where c1_0.id=?
 </pre>
 </span>
@@ -212,7 +263,7 @@ Hibernate: select c1_0.id,c1_0.category,c1_0.level,c1_0.title from course c1_0 w
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.5</a> at 6/11/2025, 12:26:20 p. m.</p>
+<a href="http://www.gradle.org">Gradle 8.5</a> at 7/11/2025, 2:48:30 p. m.</p>
 </div>
 </div>
 </body>
